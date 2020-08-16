@@ -8,7 +8,7 @@ public class Main {
     player.setPlayerHand();
     computer.setComputerHand();
 
-    System.out.println(player.getHand());
-    System.out.println(computer.getHand());
+    System.out.println(player.stringHand());
+    System.out.println(computer.stringHand());
   }
 }
