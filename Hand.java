@@ -7,10 +7,6 @@ import java.util.Random;
 public class Hand {
   private int hand;
 
-  public void setHand(int hand) {
-    this.hand = hand;
-  }
-
   public void setPlayerHand() {
     Scanner sc = new Scanner(System.in);
     try {
