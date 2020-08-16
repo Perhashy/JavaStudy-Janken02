@@ -11,7 +11,11 @@ public class Hand {
   public void setPlayerHand() {
     Scanner sc = new Scanner(System.in);
     int playerHand = sc.nextInt();
-    this.hand = playerHand;
+    if (playerHand > 0 && playerHand <= 3) {
+      this.hand = playerHand;
+    } else {
+      System.exit(0);
+    }
   }
 
   public int getHand() {
