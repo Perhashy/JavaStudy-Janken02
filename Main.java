@@ -6,7 +6,7 @@ public class Main {
     Hand computer = new Hand();
 
     player.setPlayerHand();
-    computer.setHand(2);
+    computer.setComputerHand();
 
     System.out.println(player.getHand());
     System.out.println(computer.getHand());
