@@ -6,10 +6,12 @@ public class Main {
     Hand computer = new Hand();
 
     System.out.println("じゃんけんを始めます！");
-    player.setPlayerHand();
-    computer.setComputerHand();
+    do {
+      player.setPlayerHand();
+      computer.setComputerHand();
 
-    System.out.println("あなた：" + player.stringHand());
-    System.out.println("あいて：" + computer.stringHand());
+      System.out.println("あなた：" + player.stringHand());
+      System.out.println("あいて：" + computer.stringHand());
+    } while (Game.drow(player.getHand(), computer.getHand()));
   }
 }
