@@ -13,6 +13,7 @@ public class Hand {
       System.out.println("手を数字で入力してください");
       System.out.print("(1：グー、2：チョキ、3：パー)：");
       int playerHand = sc.nextInt();
+      System.out.println("---------------------------------");
       if (playerHand > 0 && playerHand <= 3) {
         this.hand = playerHand;
       } else {
@@ -20,6 +21,7 @@ public class Hand {
         System.exit(0);
       }
     } catch (InputMismatchException e) {
+      System.out.println("---------------------------------");
       System.out.println("数値以外が入力されました、ゲームを終了します");
       System.exit(0);
     }

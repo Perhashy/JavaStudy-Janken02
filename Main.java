@@ -5,10 +5,11 @@ public class Main {
     Hand player = new Hand();
     Hand computer = new Hand();
 
+    System.out.println("じゃんけんを始めます！");
     player.setPlayerHand();
     computer.setComputerHand();
 
-    System.out.println(player.stringHand());
-    System.out.println(computer.stringHand());
+    System.out.println("あなた：" + player.stringHand());
+    System.out.println("あいて：" + computer.stringHand());
   }
 }
