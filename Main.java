@@ -12,6 +12,7 @@ public class Main {
       Play.game(player, computer, count);
       Play.nextGame();
       count++;
-    } while(true);
+    } while(Play.count());
+    System.out.println("ゲームを終了します");
   }
 }
