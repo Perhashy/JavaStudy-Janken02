@@ -1,7 +1,7 @@
 package Janken02;
 
-// import java.util.Scanner;
-// import java.util.InputMismatchException;
+import java.util.Scanner;
+import java.util.InputMismatchException;
 
 public class Play {
   public static void game(Hand player, Hand computer, int count) {
@@ -14,5 +14,23 @@ public class Play {
       System.out.println("あいて：" + computer.stringHand());
     } while (Game.drow(player.getHand(), computer.getHand()));
     Game.result(player.getHand(), computer.getHand());
+  }
+
+  public static void nextGame() {
+    Scanner sc = new Scanner(System.in);
+    try {
+      System.out.println("もう一度遊びますか？");
+      System.out.print("(1：はい、2：いいえ)：");
+      int next = sc.nextInt();
+      System.out.println("=================================");
+      if (next != 1) {
+        System.out.println("ゲームを終了します");
+        System.exit(0);
+      }
+    } catch (InputMismatchException e) {
+      System.out.println("---------------------------------");
+      System.out.println("ゲームを終了します");
+      System.exit(0);
+    }
   }
 }
