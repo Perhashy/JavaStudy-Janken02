@@ -4,8 +4,10 @@ public class Main {
   public static void main(String[] args) {
     Hand player = new Hand();
     Hand computer = new Hand();
+    int count = 1;
 
     System.out.println("じゃんけんを始めます！");
-    Play.game(player, computer);
+    Play.game(player, computer, count);
+    
   }
 }
