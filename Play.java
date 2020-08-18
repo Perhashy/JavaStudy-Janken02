@@ -5,6 +5,9 @@ import java.util.InputMismatchException;
 
 public class Play {
   static int next;
+  static int winCount;
+  static int loseCount;
+  static int drawCount;
   public static void game(Hand player, Hand computer, int count) {
     System.out.println(count + "回目のゲーム！");
     do {
@@ -13,7 +16,7 @@ public class Play {
 
       System.out.println("あなた：" + player.stringHand());
       System.out.println("あいて：" + computer.stringHand());
-    } while (Game.drow(player.getHand(), computer.getHand()));
+    } while (Game.draw(player.getHand(), computer.getHand()));
     Game.result(player.getHand(), computer.getHand());
   }
 
