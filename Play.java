@@ -4,10 +4,10 @@ import java.util.Scanner;
 import java.util.InputMismatchException;
 
 public class Play {
-  static int next;
-  static int winCount = 0;
-  static int loseCount = 0;
-  static int drawCount = 0;
+  protected static int next;
+  protected static int winCount = 0;
+  protected static int loseCount = 0;
+  protected static int drawCount = 0;
 
   public static void game(Hand player, Hand computer, int count) {
     System.out.println(count + "回目のゲーム！");
