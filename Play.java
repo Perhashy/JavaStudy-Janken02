@@ -5,9 +5,10 @@ import java.util.InputMismatchException;
 
 public class Play {
   static int next;
-  static int winCount;
-  static int loseCount;
-  static int drawCount;
+  static int winCount = 0;
+  static int loseCount = 0;
+  static int drawCount = 0;
+
   public static void game(Hand player, Hand computer, int count) {
     System.out.println(count + "回目のゲーム！");
     do {
@@ -18,21 +19,23 @@ public class Play {
       System.out.println("あいて：" + computer.stringHand());
     } while (Game.draw(player.getHand(), computer.getHand()));
     Game.result(player.getHand(), computer.getHand());
+    printCount();
   }
 
   public static void nextGame() {
     Scanner sc = new Scanner(System.in);
     try {
+      System.out.println("--------------------------------");
       System.out.println("もう一度遊びますか？");
       System.out.print("(1：はい、2：いいえ)：");
       next = sc.nextInt();
-      System.out.println("=================================");
+      System.out.println("================================");
       if (next != 1) {
         System.out.println("ゲームを終了します");
         System.exit(0);
       }
     } catch (InputMismatchException e) {
-      System.out.println("---------------------------------");
+      System.out.println("--------------------------------");
       System.out.println("ゲームを終了します");
       System.exit(0);
     }
@@ -44,5 +47,12 @@ public class Play {
     } else {
       return false;
     }
+  }
+
+  public static void printCount() {
+    System.out.println("--------------戦績--------------");
+    System.out.println("勝ち：" + Play.winCount + "回");
+    System.out.println("負け：" + Play.loseCount + "回");
+    System.out.println("引き分け：" + Play.drawCount + "回");
   }
 }

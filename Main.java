@@ -7,7 +7,7 @@ public class Main {
     int count = 1;
 
     System.out.println("じゃんけんを始めます！");
-    System.out.println("---------------------------------");
+    System.out.println("--------------------------------");
     do {
       Play.game(player, computer, count);
       Play.nextGame();

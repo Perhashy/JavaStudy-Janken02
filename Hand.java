@@ -13,7 +13,7 @@ public class Hand {
       System.out.println("手を数字で入力してください");
       System.out.print("(1：グー、2：チョキ、3：パー)：");
       int playerHand = sc.nextInt();
-      System.out.println("---------------------------------");
+      System.out.println("--------じゃんけんぽん！--------");
       if (playerHand > 0 && playerHand <= 3) {
         this.hand = playerHand;
       } else {
