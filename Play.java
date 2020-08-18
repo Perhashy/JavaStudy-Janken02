@@ -30,13 +30,10 @@ public class Play {
       System.out.print("(1：はい、2：いいえ)：");
       next = sc.nextInt();
       System.out.println("================================");
-      if (next != 1) {
-        System.out.println("ゲームを終了します");
-        System.exit(0);
-      }
     } catch (InputMismatchException e) {
       System.out.println("--------------------------------");
       System.out.println("ゲームを終了します");
+      System.out.println("また遊んでね！");
       System.exit(0);
     }
   }

@@ -14,5 +14,6 @@ public class Main {
       count++;
     } while(Play.count());
     System.out.println("ゲームを終了します");
+    System.out.println("また遊んでね！");
   }
 }
